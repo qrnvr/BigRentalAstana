@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Аренда оборудования Big Rental Astana">
+
+    <meta name="author" content="Arnur Sadyrov SE-2532">
+
+    <title>Rental | Big Rental Astana</title>
+</head>
+
+<body>
+
+    <!-- Author: Arnur Sadyrov SE-2532 -->
+
+    <header>
+        <h1>Rental</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="cameras.html">Cameras</a></li>
+            <li><a href="lenses.html">Lenses</a></li>
+            <li><a href="rental.html">Rental</a></li>
+            <li><a href="colophon.html">Colophon</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <!-- Section is separate because it explains the rental process before the user reaches the form. -->
+
+            <h2>Как работает аренда</h2>
+
+            <p>
+                Для аренды оборудования пользователь сначала выбирает
+                необходимую камеру или объектив из каталога.
+                После этого необходимо определить дату начала аренды
+                и количество дней использования оборудования.
+            </p>
+
+            <p>
+                Затем пользователь заполняет контактную информацию
+                и выбирает предпочтительный способ связи.
+                На текущем этапе проекта форма является учебной:
+                она показывает структуру будущей системы аренды,
+                однако данные пока не сохраняются в базе данных.
+            </p>
+
+            <ol start="1">
+                <li>Выберите оборудование.</li>
+                <li>Укажите дату начала аренды.</li>
+                <li>Укажите количество дней.</li>
+                <li>Заполните контактные данные.</li>
+                <li>Выберите способ связи.</li>
+                <li>Отправьте заявку.</li>
+            </ol>
+
+            <p>
+                В будущих версиях проекта форма может быть
+                подключена к серверу и базе данных для
+                обработки реальных заявок и проверки
+                доступности оборудования.
+            </p>
+
+        </section>
+
+
+        <section>
+
+            <!-- Form has its own section because submitting a rental request is a separate user action. -->
+
+            <h2>Форма заявки</h2>
+
+            <form method="post" action="#">
+
+                <!-- This form does not send data yet because Assignment 1 has no server-side processing. -->
+
+                <fieldset>
+
+                    <legend>Заявка на аренду</legend>
+
+
+                    <p>
+                        <label for="name">
+                            Имя:
+                        </label><br>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Введите ваше имя"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="email">
+                            Email:
+                        </label><br>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Введите ваш email"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="phone">
+                            Телефон:
+                        </label><br>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+7 777 000 00 00"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="days">
+                            Количество дней аренды:
+                        </label><br>
+
+                        <input
+                            type="number"
+                            id="days"
+                            name="days"
+                            min="1"
+                            placeholder="1"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+                        <label for="date">
+                            Дата начала аренды:
+                        </label><br>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        >
+                    </p>
+
+
+                    <p>
+
+                        <label for="equipment">
+                            Оборудование:
+                        </label><br>
+
+                        <select
+                            id="equipment"
+                            name="equipment"
+                            required
+                        >
+
+                            <option value="">
+                                Выберите оборудование
+                            </option>
+
+                            <optgroup label="Камеры">
+
+                                <option value="a7v">
+                                    Sony A7 V
+                                </option>
+
+                                <option value="a7siii">
+                                    Sony A7S III
+                                </option>
+
+                                <option value="a7cii">
+                                    Sony A7C II
+                                </option>
+
+                                <option value="a6700">
+                                    Sony A6700
+                                </option>
+
+                                <option value="fx3">
+                                    Sony FX3
+                                </option>
+
+                            </optgroup>
+
+
+                            <optgroup label="Объективы">
+
+                                <option value="24-70">
+                                    Sigma 24-70mm f/2.8
+                                </option>
+
+                                <option value="35mm">
+                                    Sigma 35mm f/1.4
+                                </option>
+
+                                <option value="50mm">
+                                    Sigma 50mm f/1.4
+                                </option>
+
+                                <option value="85mm">
+                                    Sigma 85mm f/1.4
+                                </option>
+
+                            </optgroup>
+
+                        </select>
+
+                    </p>
+
+
+                    <p>
+                        Предпочтительный способ связи:
+                    </p>
+
+
+                    <p>
+
+                        <input
+                            type="radio"
+                            id="contact-phone"
+                            name="contact-method"
+                            value="phone"
+                            required
+                        >
+
+                        <label for="contact-phone">
+                            Телефон
+                        </label>
+
+                    </p>
+
+
+                    <p>
+
+                        <input
+                            type="radio"
+                            id="contact-email"
+                            name="contact-method"
+                            value="email"
+                        >
+
+                        <label for="contact-email">
+                            Email
+                        </label>
+
+                    </p>
+
+
+                    <p>
+
+                        <input
+                            type="checkbox"
+                            id="agreement"
+                            name="agreement"
+                            required
+                        >
+
+                        <label for="agreement">
+                            Я согласен с условиями аренды
+                        </label>
+
+                    </p>
+
+
+                    <p>
+
+                        <label for="message">
+                            Комментарий:
+                        </label><br>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            cols="40"
+                            placeholder="Дополнительная информация"
+                        ></textarea>
+
+                    </p>
+
+
+                    <p>
+                        <button type="submit">
+                            Отправить
+                        </button>
+
+                        <button type="reset">
+                            Очистить
+                        </button>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Адрес: г. Астана, ул. Жошы хан 16/1, НП-15<br>
+
+            Телефон:
+            <a href="tel:+77757054999">
+                +7 775 705 49 99
+            </a><br>
+
+            Ежедневно: 09:00–21:00<br>
+            Приём заказов: круглосуточно
+        </p>
+
+        <p>&copy; 2026 Big Rental Astana</p>
+
+    </footer>
+
+</body>
+
+</html>
