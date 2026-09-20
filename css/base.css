@@ -1,0 +1,187 @@
+/*
+Big Rental Astana palette:
+#0f172a - deep navy for strong text and footer, matching a professional camera-rental feel
+#ffffff - clean neutral background that keeps product content easy to read
+#e5e7eb - light gray for borders and quiet surfaces
+#2563eb - brand-like blue accent for links and actions
+#64748b - muted slate for secondary information
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #0f172a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.2px;
+}
+
+/* Grouping selector: gives all heading levels one deliberate display font. */
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0.3px;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* Centering technique 1:
+   Flexbox is suitable because the header has one main item. */
+.page-header {
+    min-height: 130px;
+    padding: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(245, 247, 250);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.page-header h1 {
+    margin: 0;
+}
+
+/* Child selector:
+   matches only the ul that is a direct child of nav. */
+.site-nav > ul {
+    margin: 0;
+    padding: 16px 24px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.site-nav a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-nav a:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+}
+
+/* :first-child matches the first navigation item only. */
+.site-nav li:first-child a {
+    text-decoration-thickness: 2px;
+}
+
+/* Centering technique 2:
+   margin auto centers the fixed-width main content block. */
+.page-main {
+    width: 90%;
+    max-width: 1180px;
+    margin: 42px auto;
+}
+
+/* Descendant selector:
+   matches paragraphs anywhere inside main. */
+main p {
+    max-width: 78ch;
+}
+
+/*
+Margin-collapse note:
+Without padding/border on .content-section, the first heading's top margin can
+collapse with its parent. The section padding creates a clear spacing boundary.
+*/
+.content-section {
+    margin: 0 0 34px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background-color: #ffffff;
+}
+
+.content-section > h2 {
+    margin-top: 0;
+}
+
+/* Adjacent sibling selector:
+   matches the first paragraph immediately after an h2. */
+h2 + p {
+    margin-top: 8px;
+}
+
+/* Attribute selector:
+   matches external links that open in a new tab. */
+a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.85em;
+}
+
+.site-footer {
+    /*
+    position: static keeps the footer in normal document flow
+    after the page content.
+    */
+    position: static;
+
+    margin-top: 48px;
+    padding: 30px 24px;
+    text-align: center;
+
+    background-color: #0f172a;
+    color: white;
+
+    border-top: 4px solid #2563eb;
+}
+
+.site-footer a {
+    color: white;
+}
+
+.fixed-rental-link {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 20;
+
+    padding: 12px 18px;
+    border-radius: 999px;
+
+    background-color: #2563eb;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 700;
+
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.22);
+}
+
+.fixed-rental-link:hover {
+    text-decoration: underline;
+}

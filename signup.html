@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Регистрация аккаунта Big Rental Astana">
+
+    <meta name="author" content="Arnur Sadyrov SE-2532">
+
+    <title>Sign Up | Big Rental Astana</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/arnur.css">
+</head>
+
+<body>
+
+    <!-- Author: Arnur Sadyrov SE-2532 -->
+
+    <header class="page-header">
+        <h1>Sign Up</h1>
+    </header>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="cameras.html">Cameras</a></li>
+            <li><a href="lenses.html">Lenses</a></li>
+            <li><a href="rental.html">Rental</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="colophon.html">Colophon</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-main">
+
+        <section class="auth-section" id="signup-form">
+
+            <!-- This id is unique because there is only one registration section on this page. -->
+
+            <h2>Создание аккаунта</h2>
+
+            <form method="post"
+                  action="#"
+                  class="auth-form">
+
+                <!-- Registration is a demonstration because there is no backend/database yet. -->
+
+                <fieldset class="auth-fieldset">
+
+                    <legend>
+                        Регистрация
+                    </legend>
+
+                    <p>
+                        <label for="signup-name">
+                            Имя:
+                        </label><br>
+
+                        <input
+                            type="text"
+                            id="signup-name"
+                            name="name"
+                            placeholder="Ваше имя"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="signup-email">
+                            Email:
+                        </label><br>
+
+                        <input
+                            type="email"
+                            id="signup-email"
+                            name="email"
+                            placeholder="name@example.com"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="signup-phone">
+                            Телефон:
+                        </label><br>
+
+                        <input
+                            type="tel"
+                            id="signup-phone"
+                            name="phone"
+                            placeholder="+7 777 000 00 00"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="signup-password">
+                            Пароль:
+                        </label><br>
+
+                        <input
+                            type="password"
+                            id="signup-password"
+                            name="password"
+                            placeholder="Создайте пароль"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="signup-password-repeat">
+                            Повторите пароль:
+                        </label><br>
+
+                        <input
+                            type="password"
+                            id="signup-password-repeat"
+                            name="password-repeat"
+                            placeholder="Повторите пароль"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <input
+                            type="checkbox"
+                            id="signup-agreement"
+                            name="agreement"
+                            required
+                        >
+
+                        <label for="signup-agreement">
+                            Я согласен с условиями использования
+                        </label>
+                    </p>
+
+                    <p class="action-row">
+
+                        <button type="submit">
+                            Create Account
+                        </button>
+
+                        <button type="reset">
+                            Очистить
+                        </button>
+
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+            <p>
+                Уже есть аккаунт?
+                <a href="login.html">
+                    Войти
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <a class="fixed-rental-link" href="rental.html">
+        Rental
+    </a>
+
+    <footer class="site-footer">
+
+        <p>
+            Big Rental Astana &copy; 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

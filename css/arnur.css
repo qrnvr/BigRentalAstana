@@ -1,0 +1,249 @@
+/*
+Arnur Sadyrov — personal stylesheet for Assignment 2.
+base.css loads first; this file loads second, so equally specific rules here
+can override base.css through normal cascade/load order.
+*/
+
+/* Cascade/load-order demonstration: this overrides the base navigation link color. */
+.site-nav a {
+    color: #0f172a;
+}
+
+/* Less-obvious selector: the > means only direct child articles of these grids. */
+.product-grid > article {
+    min-width: 0;
+}
+
+/*
+Grid is better than Flexbox here because the catalog needs aligned rows AND columns.
+repeat(), minmax(), fr units and gap make the card layout consistent.
+*/
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+/* The first featured product intentionally spans two columns. */
+.product-grid .featured-card {
+    grid-column: span 2;
+}
+
+.product-card {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+/* position: relative makes the card the containing block for the absolute badge. */
+
+.product-card figure {
+    margin: 0 0 14px;
+
+    /* Centering technique 3:
+       Grid is used because it easily centers the image and caption. */
+    display: grid;
+    place-items: center;
+    gap: 8px;
+}
+
+.product-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card figcaption {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Absolute positioning places the badge inside the relative product card. */
+.card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/*
+Specificity experiment rule 1.
+Specificity = 0-2-0 (.product-card + .featured-card).
+This rule loses to the ID-based rule below.
+*/
+.product-card.featured-card {
+    border-color: #2563eb;
+}
+
+/*
+Specificity experiment rule 2.
+Specificity = 1-1-0 (#camera-list + .featured-card).
+This wins without !important because an ID is more specific than two classes.
+*/
+#camera-list .featured-card {
+    border-color: #0f172a;
+}
+
+/* Camera and lens price tables share one reusable class. */
+.price-table,
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+}
+
+.price-table th,
+.price-table td,
+.cart-table th,
+.cart-table td {
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.price-table thead,
+.cart-table thead {
+    background-color: rgb(245, 247, 250);
+}
+
+.price-table tbody tr:nth-child(2n),
+.cart-table tbody tr:nth-child(2n) {
+    background-color: rgba(229, 231, 235, 0.35);
+}
+
+/* Flexbox block #2:
+   equipment categories can wrap and each item can grow or shrink. */
+.equipment-categories {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.equipment-categories > li {
+    flex: 1 1 280px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+/* Float demonstration:
+   the image sits inside the opening paragraph. */
+.about-float {
+    float: left;
+    width: 220px;
+    margin: 0 22px 14px 0;
+    border-radius: 12px;
+}
+
+/*
+Without clear, this paragraph could continue wrapping beside the floated image.
+clear moves it below the float.
+*/
+.clear-after-float {
+    clear: both;
+}
+
+.contact-card {
+    margin: 24px 0;
+    padding: 22px;
+    border-left: 5px solid #2563eb;
+    background-color: rgb(245, 247, 250);
+}
+
+/* Form styling shared by rental, login and signup. */
+.rental-form,
+.auth-form {
+    max-width: 760px;
+}
+
+.form-grid,
+.auth-fieldset {
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+/* Attribute selector:
+   matches only inputs whose type is email. */
+input[type="email"] {
+    border-left: 4px solid #2563eb;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #64748b;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+button {
+    padding: 10px 16px;
+    border: 1px solid #0f172a;
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+.action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.auth-section,
+.cart-section {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.cart-note {
+    color: #64748b;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.15rem;
+}
+
+/* Pseudo-element:
+   adds a visual label without adding extra HTML text. */
+.cart-total::before {
+    content: "Total: ";
+    color: #64748b;
+    font-weight: 400;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Корзина аренды Big Rental Astana">
+
+    <meta name="author" content="Arnur Sadyrov SE-2532">
+
+    <title>Корзина | Big Rental Astana</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/arnur.css">
+</head>
+
+<body>
+
+    <!-- Author: Arnur Sadyrov SE-2532 -->
+
+    <header class="page-header">
+        <h1>Корзина</h1>
+    </header>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="equipment.html">Equipment</a></li>
+            <li><a href="cameras.html">Cameras</a></li>
+            <li><a href="lenses.html">Lenses</a></li>
+            <li><a href="rental.html">Rental</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="colophon.html">Colophon</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-main">
+
+        <section class="cart-section" id="rental-cart">
+
+            <!-- This id is unique because the page has one main rental cart. -->
+
+            <h2>Выбранное оборудование</h2>
+
+            <p class="cart-note">
+                На текущем этапе корзина является демонстрационной.
+                Без JavaScript и серверной части товары не добавляются автоматически.
+            </p>
+
+            <table class="cart-table">
+
+                <caption>
+                    Пример содержимого корзины
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Оборудование</th>
+                        <th scope="col">Цена за сутки</th>
+                        <th scope="col">Дней</th>
+                        <th scope="col">Итого</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Sony A7 V</td>
+                        <td>18 000 ₸</td>
+                        <td>1</td>
+                        <td>18 000 ₸</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sigma 24–70mm f/2.8</td>
+                        <td>9 000 ₸</td>
+                        <td>1</td>
+                        <td>9 000 ₸</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <p class="cart-total">
+                <strong>
+                    Общая сумма: 27 000 ₸
+                </strong>
+            </p>
+
+            <p>
+                <a href="rental.html">
+                    Перейти к форме аренды
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <a class="fixed-rental-link" href="rental.html">
+        Rental
+    </a>
+
+    <footer class="site-footer">
+
+        <p>
+            Big Rental Astana &copy; 2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -11,46 +11,60 @@
     <meta name="author" content="Arnur Sadyrov SE-2532">
 
     <title>Cameras | Big Rental Astana</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/arnur.css">
 </head>
 
 <body>
 
     <!-- Author: Arnur Sadyrov SE-2532 -->
 
-    <header>
+    <header class="page-header">
         <h1>Cameras</h1>
     </header>
 
-    <nav>
+    <nav class="site-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="equipment.html">Equipment</a></li>
             <li><a href="cameras.html">Cameras</a></li>
             <li><a href="lenses.html">Lenses</a></li>
             <li><a href="rental.html">Rental</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
             <li><a href="colophon.html">Colophon</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="page-main">
 
-        <section id="camera-list">
+        <!-- The id "camera-list" is correct because this camera catalog section is unique on the page. -->
+        <section class="content-section product-grid" id="camera-list">
 
             <!-- Each camera uses article because every model is an independent catalog item. -->
 
             <h2>Камеры Sony</h2>
 
+            <article class="product-card featured-card">
 
-            <article>
+                <span class="card-badge">
+                    Featured
+                </span>
 
                 <h3>Sony A7 V</h3>
 
                 <figure>
+
                     <img src="images/a7v.jpg"
                          alt="Sony A7 V"
                          width="250">
 
-                    <figcaption>Sony A7 V</figcaption>
+                    <figcaption>
+                        Sony A7 V
+                    </figcaption>
+
                 </figure>
 
                 <p>
@@ -63,16 +77,20 @@
             </article>
 
 
-            <article>
+            <article class="product-card">
 
                 <h3>Sony A7S III</h3>
 
                 <figure>
+
                     <img src="images/a7siii.jpg"
                          alt="Sony A7S III"
                          width="250">
 
-                    <figcaption>Sony A7S III</figcaption>
+                    <figcaption>
+                        Sony A7S III
+                    </figcaption>
+
                 </figure>
 
                 <p>
@@ -85,16 +103,20 @@
             </article>
 
 
-            <article>
+            <article class="product-card">
 
                 <h3>Sony A7C II</h3>
 
                 <figure>
+
                     <img src="images/a7cii.jpg"
                          alt="Sony A7C II"
                          width="250">
 
-                    <figcaption>Sony A7C II</figcaption>
+                    <figcaption>
+                        Sony A7C II
+                    </figcaption>
+
                 </figure>
 
                 <p>
@@ -107,16 +129,20 @@
             </article>
 
 
-            <article>
+            <article class="product-card">
 
                 <h3>Sony A6700</h3>
 
                 <figure>
+
                     <img src="images/a6700.jpg"
                          alt="Sony A6700"
                          width="250">
 
-                    <figcaption>Sony A6700</figcaption>
+                    <figcaption>
+                        Sony A6700
+                    </figcaption>
+
                 </figure>
 
                 <p>
@@ -128,16 +154,20 @@
             </article>
 
 
-            <article>
+            <article class="product-card">
 
                 <h3>Sony FX3</h3>
 
                 <figure>
+
                     <img src="images/fx3.jpg"
                          alt="Sony FX3"
                          width="250">
 
-                    <figcaption>Sony FX3</figcaption>
+                    <figcaption>
+                        Sony FX3
+                    </figcaption>
+
                 </figure>
 
                 <p>
@@ -152,13 +182,13 @@
         </section>
 
 
-        <section>
+        <section class="content-section price-section">
 
             <!-- A table is used because rental prices are structured real data that are easier to compare in rows and columns. -->
 
             <h2>Стоимость аренды камер</h2>
 
-            <table>
+            <table class="price-table">
 
                 <caption>
                     Стоимость аренды камер за сутки
@@ -216,7 +246,11 @@
 
     </main>
 
-    <footer>
+    <a class="fixed-rental-link" href="rental.html">
+        Rental
+    </a>
+
+    <footer class="site-footer">
 
         <p>
             Адрес: г. Астана, ул. Жошы хан 16/1, НП-15<br>

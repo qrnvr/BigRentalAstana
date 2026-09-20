@@ -11,43 +11,62 @@
     <meta name="author" content="Arnur Sadyrov SE-2532">
 
     <title>Big Rental Astana</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/arnur.css">
+
+    <!-- Internal style exists only to demonstrate the cascade; the inline style below overrides this rule. -->
+    <style>
+        .cascade-demo {
+            color: #64748b;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Author: Arnur Sadyrov SE-2532 -->
 
-    <header>
+    <header class="page-header">
         <h1>Big Rental Astana</h1>
     </header>
 
-    <nav>
+    <nav class="site-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="equipment.html">Equipment</a></li>
             <li><a href="cameras.html">Cameras</a></li>
             <li><a href="lenses.html">Lenses</a></li>
             <li><a href="rental.html">Rental</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
             <li><a href="colophon.html">Colophon</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="page-main">
 
-        <section id="about">
+        <!-- The id "about" is correct here because this is the one unique about section on this page. -->
+        <section class="content-section about-section" id="about">
 
             <!-- Section is used because this content describes one specific topic: the rental company. -->
 
             <h2>Про нас</h2>
 
-            <p>
+            <p class="about-text">
+                <img class="about-float"
+                     src="images/a7v.jpg"
+                     alt="Sony A7 V camera from the Big Rental catalog"
+                     width="250">
+
                 Big Rental — сервис проката профессиональной фото- и видеотехники
                 в Астане. В каталоге представлены камеры, объективы, свет,
                 стабилизаторы, аудиооборудование, мониторы, штативы и другие
                 инструменты для проведения съемок.
             </p>
 
-            <p>
+            <p class="clear-after-float">
                 Сервис подходит для фотографов, видеографов, операторов,
                 блогеров, студентов и съемочных команд. В Big Rental можно
                 выбрать оборудование для фотографии, видеопроизводства,
@@ -69,7 +88,7 @@
         </section>
 
 
-        <aside>
+        <aside class="contact-card">
 
             <!-- Aside is used because contact information supports the main content but is not part of the company description. -->
 
@@ -124,14 +143,21 @@
         <hr>
 
         <p>
-            <a href="#about">Вернуться к разделу «Про нас»</a>
+            <a href="#about">
+                Вернуться к разделу «Про нас»
+            </a>
         </p>
 
     </main>
 
-    <footer>
+    <a class="fixed-rental-link" href="rental.html">
+        Rental
+    </a>
 
-        <p>
+    <footer class="site-footer">
+
+        <!-- This single inline style demonstrates that inline CSS overrides the internal .cascade-demo color. -->
+        <p class="cascade-demo" style="color: #ffffff;">
             Big Rental &copy; 2026
             &nbsp; | &nbsp;
             Astana &amp; Kazakhstan

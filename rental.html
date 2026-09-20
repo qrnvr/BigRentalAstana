@@ -11,30 +11,36 @@
     <meta name="author" content="Arnur Sadyrov SE-2532">
 
     <title>Rental | Big Rental Astana</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/arnur.css">
 </head>
 
 <body>
 
     <!-- Author: Arnur Sadyrov SE-2532 -->
 
-    <header>
+    <header class="page-header">
         <h1>Rental</h1>
     </header>
 
-    <nav>
+    <nav class="site-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="equipment.html">Equipment</a></li>
             <li><a href="cameras.html">Cameras</a></li>
             <li><a href="lenses.html">Lenses</a></li>
             <li><a href="rental.html">Rental</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
             <li><a href="colophon.html">Colophon</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="page-main">
 
-        <section>
+        <section class="content-section">
 
             <!-- Section is separate because it explains the rental process before the user reaches the form. -->
 
@@ -74,20 +80,19 @@
         </section>
 
 
-        <section>
+        <section class="content-section form-section">
 
             <!-- Form has its own section because submitting a rental request is a separate user action. -->
 
             <h2>Форма заявки</h2>
 
-            <form method="post" action="#">
+            <form class="rental-form" method="post" action="#">
 
-                <!-- This form does not send data yet because Assignment 1 has no server-side processing. -->
+                <!-- This form does not send data yet because there is no server-side processing. -->
 
-                <fieldset>
+                <fieldset class="form-grid">
 
                     <legend>Заявка на аренду</legend>
-
 
                     <p>
                         <label for="name">
@@ -103,7 +108,6 @@
                         >
                     </p>
 
-
                     <p>
                         <label for="email">
                             Email:
@@ -118,7 +122,6 @@
                         >
                     </p>
 
-
                     <p>
                         <label for="phone">
                             Телефон:
@@ -132,7 +135,6 @@
                             required
                         >
                     </p>
-
 
                     <p>
                         <label for="days">
@@ -149,7 +151,6 @@
                         >
                     </p>
 
-
                     <p>
                         <label for="date">
                             Дата начала аренды:
@@ -163,9 +164,7 @@
                         >
                     </p>
 
-
                     <p>
-
                         <label for="equipment">
                             Оборудование:
                         </label><br>
@@ -204,7 +203,6 @@
 
                             </optgroup>
 
-
                             <optgroup label="Объективы">
 
                                 <option value="24-70">
@@ -226,17 +224,13 @@
                             </optgroup>
 
                         </select>
-
                     </p>
-
 
                     <p>
                         Предпочтительный способ связи:
                     </p>
 
-
                     <p>
-
                         <input
                             type="radio"
                             id="contact-phone"
@@ -248,12 +242,9 @@
                         <label for="contact-phone">
                             Телефон
                         </label>
-
                     </p>
 
-
                     <p>
-
                         <input
                             type="radio"
                             id="contact-email"
@@ -264,12 +255,9 @@
                         <label for="contact-email">
                             Email
                         </label>
-
                     </p>
 
-
                     <p>
-
                         <input
                             type="checkbox"
                             id="agreement"
@@ -280,12 +268,9 @@
                         <label for="agreement">
                             Я согласен с условиями аренды
                         </label>
-
                     </p>
 
-
                     <p>
-
                         <label for="message">
                             Комментарий:
                         </label><br>
@@ -297,9 +282,7 @@
                             cols="40"
                             placeholder="Дополнительная информация"
                         ></textarea>
-
                     </p>
-
 
                     <p>
                         <button type="submit">
@@ -319,8 +302,11 @@
 
     </main>
 
+    <a class="fixed-rental-link" href="rental.html">
+        Rental
+    </a>
 
-    <footer>
+    <footer class="site-footer">
 
         <p>
             Адрес: г. Астана, ул. Жошы хан 16/1, НП-15<br>

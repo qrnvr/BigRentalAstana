@@ -11,30 +11,36 @@
     <meta name="author" content="Arnur Sadyrov SE-2532">
 
     <title>Colophon | Big Rental Astana</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/arnur.css">
 </head>
 
 <body>
 
     <!-- Author: Arnur Sadyrov SE-2532 -->
 
-    <header>
+    <header class="page-header">
         <h1>Colophon</h1>
     </header>
 
-    <nav>
+    <nav class="site-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="equipment.html">Equipment</a></li>
             <li><a href="cameras.html">Cameras</a></li>
             <li><a href="lenses.html">Lenses</a></li>
             <li><a href="rental.html">Rental</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
             <li><a href="colophon.html">Colophon</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="page-main">
 
-        <section>
+        <section class="content-section">
 
             <!-- This section explains the project itself rather than the rental company. -->
 
@@ -49,18 +55,20 @@
             </p>
 
             <p>
-                На данном этапе сайт использует только
-                <abbr title="HyperText Markup Language">HTML</abbr>.
+                На данном этапе сайт использует
+                <abbr title="HyperText Markup Language">HTML</abbr>
+                для структуры и
                 <abbr title="Cascading Style Sheets">CSS</abbr>
-                и JavaScript пока не используются.
-                Поэтому оформление страниц остается стандартным,
-                а основное внимание уделяется структуре документа.
+                для оформления и макета.
+                JavaScript пока не используется.
+                Основное внимание во второй работе уделяется селекторам,
+                каскаду, Flexbox, Grid и позиционированию.
             </p>
 
         </section>
 
 
-        <section>
+        <section class="content-section">
 
             <!-- This section demonstrates the semantic HTML structure used in the project. -->
 
@@ -90,7 +98,7 @@
         </section>
 
 
-        <section>
+        <section class="content-section">
 
             <h2>Работа с файлами</h2>
 
@@ -115,7 +123,7 @@
         </section>
 
 
-        <section>
+        <section class="content-section">
 
             <h2>Использованные инструменты</h2>
 
@@ -126,9 +134,14 @@
                     Структура и содержимое страниц.
                 </dd>
 
+                <dt>CSS</dt>
+                <dd>
+                    Оформление, цвета, типографика и макет страниц.
+                </dd>
+
                 <dt>Visual Studio Code</dt>
                 <dd>
-                    Редактор HTML-файлов.
+                    Редактор файлов проекта.
                 </dd>
 
                 <dt>Google Chrome</dt>
@@ -146,7 +159,6 @@
         </section>
 
 
-
         <!-- Div is used only as a generic technical container because no semantic element fits this small note better. -->
 
         <div>
@@ -161,13 +173,17 @@
 
 
         <p>
-            Версия проекта: 1<sup>st</sup>
+            Версия проекта: 2<sup>nd</sup>
         </p>
 
     </main>
 
 
-    <footer>
+    <a class="fixed-rental-link" href="rental.html">
+        Rental
+    </a>
+
+    <footer class="site-footer">
 
         <p>
             Адрес: г. Астана, ул. Жошы хан 16/1, НП-15<br>
